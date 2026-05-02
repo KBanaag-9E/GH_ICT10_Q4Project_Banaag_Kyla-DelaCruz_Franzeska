@@ -61,8 +61,11 @@ def class_list(e):
     display(HTML('''
         <style>
             #output table {
-                width: 80%;
+                width: 100%;
+                max-width: 100%;
                 border-collapse: collapse;
+                table-layout: fixed;
+                word-break: break-word;
             }
             #output th, #output td {
                 border: 1px solid;
