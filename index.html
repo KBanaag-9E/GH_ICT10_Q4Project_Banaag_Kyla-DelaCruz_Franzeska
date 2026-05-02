@@ -14,13 +14,65 @@
         <!-- External CSS -->
         <link rel="stylesheet" type="text/css" href="style.css">
 
-        <title></title>
+        <py-config>
+            packages = ["pandas"]
+        </py-config>
+
+        <title>Grade 10-Emerald A.Y. 25-26</title>
+
+        <style>
+            div {
+                color:black;
+            }
+
+            th {
+                min-width: 50px;
+            }
+
+            table {
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            #header {
+                margin-left: 5vw;
+            }
+
+            .container {
+                margin-left: 5vw;
+            }
+
+            #pandas-output {
+                margin-left: 5vw;
+            }
+        </style>
 
     </head>
     <body>
         <py-script src="main.py"></py-script>
 
-        <h2 class="mt-2">Grade 10-Emerald A.Y. 25-26 Class List</h2>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">10-Emerald Greenhills A.Y. 25-26</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"></button>
+
+            <div class="d-flex" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="index.html">Class List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attendance.html">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="memories.html">Memories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <h2 class="mt-2 text-center">10-Emerald Class List</h2>
 
             <!-- FORM -->
             <div class="container mt-3" style="padding: 10px;">
@@ -52,6 +104,9 @@
                 </form>
             </div>
 
-        <div id="output"></div>
+        <center>
+            <div id="output" class="mt-3"></div>
+        </center>
+
     </body>
 </html>
