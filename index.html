@@ -21,28 +21,49 @@
         <title>Grade 10-Emerald A.Y. 25-26</title>
 
         <style>
-            div {
-                color:black;
-            }
-
-            th {
-                min-width: 50px;
-            }
-
-            table {
-                font-family: 'Courier New', Courier, monospace;
-            }
-
-            #header {
-                margin-left: 5vw;
+            body {
+                background-color: #C9E4CA;
+                font-family: monospace;
             }
 
             .container {
-                margin-left: 5vw;
+                padding: 20px;
+                background-color: #87BBA2;
+                border-radius: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
 
-            #pandas-output {
-                margin-left: 5vw;
+            .tracker-card {
+                background-color: #3B6064;
+                border-radius: 22px;
+                color: beige;
+            }
+
+            .graph-card {
+                border-radius: 0;
+                background-color: #3B6064;
+                padding: 22px;
+            }
+
+            .tracker-card label,
+            .tracker-card input,
+            .tracker-card .btn {
+                color: beige;
+            }
+
+            .tracker-card .form-control,
+            .tracker-card .btn {
+                background-color: rgba(255,255,255,0.95);
+            }
+
+            .tracker-card .btn-primary {
+                background-color: #6dab82;
+                border-color: #6dab82;
+            }
+
+            .tracker-card .btn-secondary {
+                background-color: #87bba2;
+                border-color: #87bba2;
             }
         </style>
 
@@ -72,41 +93,46 @@
         </div>
         </nav>
 
-        <h2 class="mt-2 text-center">10-Emerald Class List</h2>
-
-            <!-- FORM -->
-            <div class="container mt-3" style="padding: 10px;">
-                <form>
-
-                    <!-- Name -->
-                    <input class="form-control"  type="text" id="name" name="name" placeholder="Enter name" required> <br>
-
-                    <!-- Nickname -->
-                    <input class="form-control"  type="text" id="nickname" name="nickname" placeholder="Enter nickname" required> <br>
-
-                    <!-- Section -->
-                    <input class="form-control"  type="text" id="section" name="section" placeholder="Enter section" required> <br>
-
-                    <!-- Birthday -->
-                    <input class="form-control"  type="text" id="bday" name="bday" placeholder="Enter birthday" required> <br>
-
-                    <!-- Interest -->
-                    <input class="form-control"  type="text" id="interest" name="interest" placeholder="Enter interest" required> <br>
-
-                    <!-- Favorite Subject -->
-                    <input class="form-control"  type="text" id="subject" name="subject" placeholder="Enter favorite subject"  required> <br>
-
-                    <!-- BUTTONS -->
-                    <div class="d-flex gap-2">
-                        <input class="btn btn-primary" type="button" py-click="add_classmate" value="Add Classmate">
-                        <input class="btn btn-secondary" type="button" py-click="class_list" value="Display Class List">
+        <div class="container mt-3">
+            <div class="row justify-content-center align-items-start g-4">
+                <div class="col-md-5">
+                    <div class="card shadow p-4 tracker-card">
+                    <h2 class="text-center fw-bold" style="color: beige;">10-Emerald Class List</h2>
+                        <form class="mt-2">
+                            <!-- Name -->
+                            <label class="fw-bold" style="color: beige;">Name</label>
+                            <input class="form-control mb-3" type="text" id="name" name="name" placeholder="Enter name" required>
+                            <!-- Nickname -->
+                            <label class="fw-bold" style="color: beige;">Nickname</label>
+                            <input class="form-control mb-3" type="text" id="nickname" name="nickname" placeholder="Enter nickname" required>
+                            <!-- Section -->
+                            <label class="fw-bold" style="color: beige;">Section</label>
+                            <input class="form-control mb-3" type="text" id="section" name="section" placeholder="Enter section" required>
+                            <!-- Birthday -->
+                            <label class="fw-bold" style="color: beige;">Birthday</label>
+                            <input class="form-control mb-3" type="text" id="bday" name="bday" placeholder="Enter birthday" required>
+                            <!-- Interest -->
+                            <label class="fw-bold" style="color: beige;">Interest</label>
+                            <input class="form-control mb-3" type="text" id="interest" name="interest" placeholder="Enter interest" required>
+                            <!-- Favorite Subject -->
+                            <label class="fw-bold" style="color: beige;">Favorite Subject</label>
+                            <input class="form-control mb-4" type="text" id="subject" name="subject" placeholder="Enter favorite subject" required>
+                            <!-- Buttons -->
+                            <div class="d-flex gap-2">
+                                <input class="btn btn-primary w-100" type="button" py-click="add_classmate" value="Add Classmate">
+                                <input class="btn btn-secondary w-100" type="button" py-click="class_list" value="Display Class List">
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
+                <div class="col-md-7">
+                    <div class="card graph-card shadow">
+                        <div id="output"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-        <center>
-            <div id="output" class="mt-3"></div>
-        </center>
 
     </body>
 </html>
