@@ -20,8 +20,10 @@
     <body>
         <py-script src="main.py"></py-script>
 
+        <h2 class="mt-2">Grade 10-Emerald A.Y. 25-26 Class List</h2>
+
             <!-- FORM -->
-            <div class="container2 mt-5">
+            <div class="container mt-3" style="padding: 10px;">
                 <form>
 
                     <!-- Name -->
@@ -42,8 +44,11 @@
                     <!-- Favorite Subject -->
                     <input class="form-control"  type="text" id="subject" name="subject" placeholder="Enter favorite subject"  required> <br>
 
-                    <!-- BUTTON -->
-                    <input class="form-control" type="button" py-click="add_classmate" value="Add & Display Classmate">
+                    <!-- BUTTONS -->
+                    <div class="d-flex gap-2">
+                        <input class="btn btn-primary" type="button" py-click="add_classmate" value="Add Classmate">
+                        <input class="btn btn-secondary" type="button" py-click="class_list" value="Display Class List">
+                    </div>
                 </form>
             </div>
 
